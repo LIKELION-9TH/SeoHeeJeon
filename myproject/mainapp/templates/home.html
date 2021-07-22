@@ -19,7 +19,7 @@
             height: 60px; 
             font-size: 40px;
             margin: auto;
-            margin-top: 80px;
+            margin-top: 60px;
             margin-bottom: 20px;
             text-align:center;
             
@@ -31,11 +31,73 @@
             text-align: center;
         }
         .profile-image{
-            margin-top:100px;
+            margin:auto;
+            margin-top:50px;
             width:200px;
             height:200px;
-            margin:auto;
         }
+        .box-contents{
+            width:100%;
+            height:100%;
+            margin:50px 0px;
+        }
+        .subject{
+            width:200px;
+            height:40px;
+            margin: auto;
+        }
+        .subject-num{
+            font-size:20px;
+            margin-left:10px;
+            margin-right:10px;
+            color:slateblue;
+        }
+        .subject-name{
+            font-size:30px;
+             margin-left:10px;
+            margin-right:10px;
+        }
+        .paragraph-parent{
+            
+            width: 90%;
+            margin: 10px auto;
+            display: flex;
+            margin-top:40px;
+        }
+        .paragraph-text{
+            flex:2;
+            width:60%;
+        }
+        .paragraph-photo{
+            flex:1;
+            width:30%;
+            margin-left:10px;
+        }
+        .skillbox-parent{
+            width: 90%;
+            margin: 10px auto;
+            display: flex;
+            margin-top:40px;
+        }
+        .skillbox{
+            border: 1px solid slateblue;
+            background-color:slateblue;
+            
+            flex:1;
+            width:30%;
+            height:300px;
+            margin: 15px;
+            padding: 15px;
+
+            border-radius: 15px;
+
+            text-align:center;
+            font-size:25px;
+            color:white;
+
+            
+        }
+
       
     </style>
 </head>
@@ -72,7 +134,73 @@
     <div class="detail">
         안녕하세요 기획하는 개발자 전서희입니다.<br> 새로운 아이디어로 사람들의 삶을 편리하게 바꿔주는 서비스를 개발하고자 합니다.😃
     </div>
-    <hr >
+    <!-- about me -->
+    <hr>
+    <div class="box-contents">
+        <div class="subject">
+            <span class="subject-num">
+                01.
+            </span>
+            <span class="subject-name">
+                About Me
+            </span>
+        </div>
+        <div class="paragraph-parent">
+            <div class="paragraph-text">
+                <div class="introduce">
+                    안녕하세요!기획하는 개발자 전서희입니다.
+               , and I've had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.
+            
+                </div>
+                <div class="timeline">
+                    <div class="timeline-subject">
+                        타임라인
+                    </div>
+                    <div class="timeline-contents">
+                        <ul>
+                            <li>👶 1998년 7월 25일 출생</li>
+                            <li>🏫 북일여자고등학교 졸업 (2014.03 ~ 2017.02)</li>
+                            <li>👨‍🎓성신여자대학교 재학 (2017.03 ~)
+                                <ul>
+                                    <li>서비스디자인공학과</li>
+                                    <li>컴퓨터공학과</li>
+                                  </ul>
+                            </li>
+                        </ul>
+                    </div>       
+                </div>
+               </div>
+            <div class="paragraph-photo">
+                <img src="{% static "image/me2.jpeg" %}" width=200px>
+            </div>
+        </div>
+    </div>
+
+    <!-- skill -->
+    <hr>
+    <div>
+        <div class="subject">
+            <span class="subject-num">
+                02.
+            </span>
+            <span class="subject-name">
+                Skills
+            </span>
+        </div>
+        <div class="skillbox-parent">
+            <div class="skillbox">
+                Front-end Developer
+            </div>
+            <div class="skillbox">
+                Designer
+            </div>
+            <div class="skillbox">
+                Planner
+            </div>
+        </div>
+
+    </div>
+
 
    
       
