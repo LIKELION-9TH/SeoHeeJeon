@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color:slateblue;
+            width: 80%;
+            padding:10px;
+            margin-top:80px;
+            color: white;
+            border-radius:15px;
+        }
+   
+        .title{
+            font-size:25px;
+            width:200px;
+            margin:auto;
+        }
+    
+        .inform{
+            width:300px;
+            margin:auto;
+            margin-top:10px;
+        }
+     
+        .lyrics{
+            width:500px;
+            background-color: whitesmoke;
+            color: black;
+            text-align:center;
+            margin:auto;
+            margin-top:10px;
+            margin-bottom:20px;
+            padding:40px;
+            border-radius:15px;
+        }
+        .button{
+            text-align:center;
+            color:white;     
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+            <div class="title">{{blog.title}} </div>
+            
+            <div class="inform"> 
+                <span class="artist">{{blog.writer}} |  </span>
+                <span class="date">{{blog.pub_date}} </span>
+            </div>
+    
+            <div class="lyrics">{{blog.body}} </div>
+
+
+        <div class="button">
+            <a href="{%url 'edit' blog.id%}">수정</a>
+            <a href="{%url 'delete' blog.id %}">삭제</a>
+            <a href="{%url 'favmusic' %}">확인</a>
+        </div>
+    </div>
+</body>
+</html>

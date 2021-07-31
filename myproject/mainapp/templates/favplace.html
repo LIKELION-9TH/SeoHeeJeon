@@ -1,0 +1,64 @@
+{% extends 'base.html'%}
+
+{% block contents %}
+{% load static %}
+<style>
+   .favplace-main{
+       font-size:60px;
+       width:370px;
+       margin: auto;
+       margin-top: 50px;
+       margin-bottom: 50px;
+   }
+    
+    .favplace-contents{
+        width: 50%;
+        margin:auto;
+        z-index: 1;
+    }
+</style>
+<!-- 첫사진 -->
+<div class="favplace-main">
+    Favorite Place
+</div>
+<div class="favplace-contents">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static "image/place1.jpeg" %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>몽골 고비사막</h5>
+              <p> 드넓은 초원과 높은 하늘이 전부인 곳, 밤이 되면 은하수와 별똥별로 가장 화려한 곳이 되는 몽골</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static "image/image3.jpeg" %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>프랑스 프로방스</h5>
+              <p>남프랑스 특유의 따뜻함과 여유로움을 느낄 수 있는 곳, 라벤더가 정말 많은 프로방스</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static "image/place3.jpeg" %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>제주도 우도</h5>
+              <p>섬속의 섬 우도, 에메랄드 빛 바다와 새하얀 모래사장의 조합이 잘 어울리는 서빈백사</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+{%endblock%}

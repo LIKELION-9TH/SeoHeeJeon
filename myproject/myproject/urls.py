@@ -16,11 +16,22 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from mainapp import views
+# from blog import views
+
 from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
-    path('hello/',views.hello, name="hello"),
+    path('hobby/',views.hobby, name="hobby"),
+    path('favplace/',views.favplace, name="favplace"),
+    path('favmusic/',views.favmusic, name="favmusic"),
+    path('picture/',views.picture, name="picture"),
+    path('<str:id>', views.detail, name="detail"),
+    path('new/',views.new, name="new"),
+    path('create/', views.create, name="create"),
+    path('edit/<str:id>', views.edit, name="edit"),
+    path('update/<str:id>', views.update, name="update"),
+    path('delete/<str:id>', views.delete, name="delete"),
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

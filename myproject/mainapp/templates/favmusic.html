@@ -1,0 +1,107 @@
+{% extends 'base.html'%}
+
+{% block contents %}
+<style>
+    .favorite-music{
+        margin-top:100px;
+        margin-left:100px;
+        margin-right:100px;
+    }
+    #container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+
+    .favorite-music-main{
+        color:black;
+        font-size:80px;
+    }
+
+    table{
+        border-collapse:collapse;
+        background-color: whitesmoke;
+        
+    }
+    th{
+        font-size:18px;
+        color:white;
+        padding:10px 20px;
+        width:200px;
+        background-color: slateblue;
+    }
+    tr{border: 1px solid gray;}
+    td{
+        width: 200px;
+        text-align: left;
+        font-size: 20px;
+        padding: 20px; 
+    }
+    #n3{
+        width:500px;
+    }
+    .music-artist{
+        color:gray;
+        font-size:18px;
+    }
+    .music-summary{
+        color:gray;
+        font-size:18px;
+    }
+    .edit-delete{
+        font-size:15px;
+    }
+ 
+
+   
+</style>
+<div class="favorite-music" id="container">
+    <div class="favorite-music-main">Favorite Music </div>
+    
+    <hr style="height:3px;background-color:black;">
+
+    <table>
+    <thead> 
+        <tr>
+            <th id="n1">   
+                노래 제목
+            </th>
+            <th id="n2">
+                가수
+            </th>
+            <th id="n3">
+                가사보기
+            </th>
+            <th id="n4">
+                수정/삭제
+            </th>     
+        </tr>
+ 
+    </thead>   
+  
+    
+    <tbody>
+    {% for blog in blogs %}
+    <tr class="music-inform">
+        <td class="music-title">{{blog.title}}</td>
+        <td class="music-artist">{{blog.writer}}</td>
+        <td class="music-summary">{{blog.summary}} 
+            <a href ="{%url 'detail' blog.id %}" style="font-size:15px;">자세히보기</a>
+            
+        </td>
+        <td class="edit-delete">
+            <a href ="{%url 'edit' blog.id %}">수정</a>
+            <a href ="{%url 'delete' blog.id %}">삭제</a>
+        </td>
+    <tr>    
+    {% endfor %}
+    
+    </tbody>
+    
+</table>
+<br>
+<button><a href="{%url 'new' %}">음악 추가하기</a></button>
+</div>    
+{%endblock%}

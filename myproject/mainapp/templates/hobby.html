@@ -1,0 +1,142 @@
+{% extends 'base.html'%}
+
+{% block contents %}
+{% load static %}
+<style>
+   
+    .hobby-main{
+        margin-top: 100px;
+        display:flex;
+    }
+    .hobby-main-left{
+        flex:3;
+        margin-left: 100px;
+        margin-right:40px;
+    }
+    .hobby-main-right{
+        flex:2;
+    }
+    .hobby-main-subject{
+        color:black;
+        font-size:100px;
+        font-style:initial;
+    }
+    .hobby-main-contents{
+        color:black;
+        font-size:30px;
+        font-style:initial;
+    }
+    .hobby-sub-contents{
+        margin-top:20px;
+        color: gray;
+    }
+    .hobby-detail-main{
+        width:130px;
+        margin:auto;
+        margin-top:200px;
+        margin-bottom:100px;
+     
+
+        color:black;
+        font-size:50px;
+        font-style:initial;
+        
+        
+      
+    }
+    .hobby-example-parents{
+        
+        display:flex;
+        width:80%;
+        margin:auto;
+        
+       
+        margin-left: 100px;
+        justify-content: space-around;
+        margin-bottom: 200px;
+        
+    }
+    .hobby-example-children{
+        flex:1;
+        
+        
+    }
+    .detail-photo{
+        margin-left:50px;
+        margin-right:50px;
+        border-radius: 70%;
+        overflow: hidden;
+        border: 1px solid gray;
+    }
+    .detail-contents{
+        font-size:20px;
+        width:20%;
+        
+        margin:auto;
+        margin-top:20px;
+    }
+
+    
+    
+</style>
+    <div class="hobby-contents">
+        <div class="hobby-main">
+            <div class="hobby-main-left">
+                <div class="hobby-main-subject">
+                    Hobby.
+                </div>
+                <div class="hobby-main-contents">
+                    가장 좋아하는 취미는 무엇인가요?
+                </div>
+                <div class="hobby-sub-contents">
+                    저는 최대한 많은 경험을 해보는 것을 가장 중요하게 생각합니다.<br>
+                    그래서 낯선 곳을 가서 그곳의 역사와 문화를 온몸으로 느끼는 여행을 가장 좋아합니다.
+                    새로운 사람들을 사귀고, 여행지에서 처음 경험해보는 문화와 역사들을 알게되는 과정들을 모두 사랑합니다.<br>
+                    같은 맥락에서 시간적, 공간적 한계로 여행을 가지 못할 때는 책을 통해 그 갈증을 해소하곤 합니다.
+                    여행 후기책을 읽으며 간접적으로 여행 경험을 하기도 하고, 자기계발서처럼 자신의 삶의 가치관에 대해서 쓴 책들도
+                    읽으며 다양한 삶에 대해서 알아가곤 합니다. 호기심이 많아서 모든 분야에 대해서 배우고 싶어서 역사, 경제, 과학 관련 서적도 많이 읽습니다.<br>
+                    마지막으로 등산을 좋아합니다. 처음 올라갈 때는 어렵지만, 정상에 오르고 난 뒤의 뿌듯함과
+                    내려올 때 맞는 시원한 바람이 좋아서 꾸준하게 등산을 합니다.
+
+
+                </div>
+            </div>
+           <div class="hobby-main-right">
+            <div class="hobby-photo">
+                <img src="{% static "image/travel2.jpeg" %}" width=400px>
+            </div>
+           </div>
+        </div>
+        <div class="hobby-detail">
+            <div class="hobby-detail-main">
+                Detail
+            </div>
+            <div class="hobby-example-parents">
+                <div class="hobby-example-child">
+                    <div class="detail-photo">
+                        <img src="{% static "image/travel1.jpeg" %}" width=300px; height=300px>
+                    </div>
+                    <div class="detail-contents">
+                        여행하기
+                    </div>
+                </div>
+                <div class="hobby-example-child">
+                    <div class="detail-photo">
+                        <img src="{% static "image/book2.jpeg" %}" width=300px; height=300px>
+                    </div>
+                    <div class="detail-contents">
+                        책읽기
+                    </div>
+                </div>
+                <div class="hobby-example-child">
+                    <div class="detail-photo">
+                        <img src="{% static "image/mountain.jpeg" %}" width=300px; height=300px>
+                    </div>
+                    <div class="detail-contents">
+                        등산하기
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+{%endblock%}

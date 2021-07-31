@@ -1,0 +1,82 @@
+{% extends 'base.html'%}
+
+{% block contents %}
+{% load static %}
+<style>
+    .picture-main{
+        font-size:80px;
+        width:200px;
+        margin:auto;
+        margin-bottom:50px; 
+
+    }
+    .picture-container{
+        
+        width:80%;
+        margin: 100px;  
+        
+    }
+
+</style>
+<div class="picture-container">
+    <div class="picture-main">
+        Image
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="{% static "image/image1.jpeg" %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">2019.07</h5>
+              <p class="card-text">몽골 여행 중에 홉스골에 처음 도착했을 때 찍은 사진 </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="{% static "image/image2.jpeg" %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">2021.04</h5>
+              <p class="card-text">지난 4월에 고등학교 친구들이랑 천안 각원사 놀러갔을 때 찍은 사진</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="{% static "image/image3.jpeg" %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">2021.03</h5>
+              <p class="card-text">가족끼리 제주도여행 갔을 때 찍은 사진 </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="{% static "image/image4.jpeg" %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">2020.10</h5>
+              <p class="card-text">대학 동기들이랑 정동진 가서 찍은 바다 사진</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card">
+              <img src="{% static "image/place1.jpeg" %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">2019.06</h5>
+                <p class="card-text">몽골 여행 중 차강 소브라가서 찍은 사진</p>
+              </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+              <img src="{% static "image/image6.jpeg" %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">2020.11</h5>
+                <p class="card-text">혜린이랑 남산타워가서 찍은 서울의 야경</p>
+              </div>
+            </div>
+          </div>
+      </div>
+</div>
+{%endblock%}
