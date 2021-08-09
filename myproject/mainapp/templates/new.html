@@ -1,7 +1,8 @@
 <h1>Write Your Favorite Music</h1>
 
-<form action="{%url 'create'%}" method="POST">
+<form action="{%url 'create'%}" method="POST" enctype="multipart/form-data">
     {%csrf_token%}
+    <p>사진: <input type="file" name="image"></p>
     <p>제목: <input type="text" name="title"></p>
     <p>작성자: <input type="text" name="writer"></p>
     본문: <textarea name="body" id="" cols="30" rows="10"></textarea>

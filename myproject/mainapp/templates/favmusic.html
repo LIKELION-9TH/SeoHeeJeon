@@ -65,6 +65,9 @@
     <table>
     <thead> 
         <tr>
+            <th id="n0">   
+                노래 사진
+            </th>
             <th id="n1">   
                 노래 제목
             </th>
@@ -85,6 +88,10 @@
     <tbody>
     {% for blog in blogs %}
     <tr class="music-inform">
+
+        {% if blog.image %}
+            <td><div class="image"><img src="{{blog.image.url}}" alt="" width=50px></div></td>
+        {% endif %}  
         <td class="music-title">{{blog.title}}</td>
         <td class="music-artist">{{blog.writer}}</td>
         <td class="music-summary">{{blog.summary}} 

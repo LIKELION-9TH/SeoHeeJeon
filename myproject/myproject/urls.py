@@ -34,4 +34,4 @@ urlpatterns = [
     path('edit/<str:id>', views.edit, name="edit"),
     path('update/<str:id>', views.update, name="update"),
     path('delete/<str:id>', views.delete, name="delete"),
-]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

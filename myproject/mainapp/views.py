@@ -29,6 +29,7 @@ def new(request):
 
 def create(request):
     new_blog = Blog()
+    new_blog.image=request.FILES['image']
     new_blog.title=request.POST['title']
     new_blog.writer=request.POST['writer']
     new_blog.body=request.POST['body']
@@ -42,6 +43,7 @@ def edit(request,id):
 
 def update(request, id):
     update_blog = Blog.objects.get(id=id)
+    update_blog.image=request.FILES['image']
     update_blog.title = request.POST['title']
     update_blog.writer = request.POST['writer']
     update_blog.body = request.POST['body']

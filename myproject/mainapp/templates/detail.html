@@ -46,7 +46,9 @@
 </head>
 <body>
     <div class="container">
-
+        {% if blog.image %}
+            <div class="image"><img src="{{blog.image.url}}" alt=""></div>
+        {% endif %}    
             <div class="title">{{blog.title}} </div>
             
             <div class="inform"> 

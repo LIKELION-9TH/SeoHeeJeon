@@ -2,6 +2,7 @@
 
 <form action="{%url 'update' blog.id %}" method="POST">
     {%csrf_token%}
+    <p>사진: <input type="file" name="image" value="{{blog.image}}"></p>
     <p>제목: <input type="text" name="title" value="{{blog.title}}"></p>
     <p>작성자: <input type="text" name="writer" value="{{blog.writer}}"></p>
     본문: <textarea name="body" id="" cols="30" rows="10"></textarea>
